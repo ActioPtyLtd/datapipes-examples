@@ -21,7 +21,8 @@ options:
     The parameter will run DataPipes as a long running service, listening on a predefined port specified in the configuration file.
 
 vmargs:
-Command-line arguments used to substitue values in the configuration file in the form of -Dkey1=val1...
+* -Dkey=val 
+    Command-line arguments used to substitue values in the configuration file.
 
 
 ## Hello World
