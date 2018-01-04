@@ -11,13 +11,7 @@ DataPipes is written in Scala and runs on the JVM, allowing for it to be deploye
 ### DataSets
 DataSets are hierarchical data structures used by DataPipes internally. DataSets can be defined by the following data types: 
 
-* String
-* Numeric
-* Date
-* Boolean
-* Record
-* Array
-* Empty
+* String, Numeric, Date, Boolean, Record, Array or Empty
 
 These data structures can be thought of as json structures, such as the following:
 
