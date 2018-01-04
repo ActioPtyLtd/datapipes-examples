@@ -1,0 +1,45 @@
+
+script {
+  settings {
+    namespace = "actio.datapipes.task.Term.Functions"
+    version = "v2"
+  }
+  tasks {
+    read_csv {
+      type = extract
+      dataSource {
+        type = file
+        behavior = csv
+        directory = "./examples/data/"
+        query {
+          read {
+            filenameTemplate ="TaxableIncome2014.csv"
+          }
+        }
+      }
+    }
+    write_output_text {
+      type = load
+      dataSource {
+        type = file
+        behavior = txt
+        directory = "./"
+        query {
+          create {
+            filenameTemplate = "output.txt"
+            line = "The 2014 median income for postcode ${numeric(this.Postcode)} is ${numeric(this.MedianIncome,\"$#,###.00\")}"
+          }
+        }
+        
+      }
+    }
+  }
+  pipelines {
+    p_helloworld {
+      pipe = "read_csv | write_output_text"
+    }
+  }
+  startup {
+    exec = "p_helloworld"
+  }
+}
