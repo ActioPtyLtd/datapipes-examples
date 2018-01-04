@@ -15,13 +15,13 @@ $ ./run -c <filename> [options]... [vmargs]...
 ```
 
 options:
-* -p, --pipe 
+* *-p, --pipe*
     This is used to specify which pipe to execute in the configuration file. The default is the startup pipe specified in the configuration file.
-* -s, --service
+* *-s, --service*
     The parameter will run DataPipes as a long running service, listening on a predefined port specified in the configuration file.
 
 vmargs:
-* -Dkey=val 
+* *-Dkey=val*
     Command-line arguments used to substitue values in the configuration file.
 
 
