@@ -13,17 +13,15 @@ The command line options for DataPipes are as follows:
 $ ./run -c <filename> [options]... [vmargs]...
 
 ```
-options
-    Command-line options seperated by spaces.
-vmwargs
-    Command-line arguments used to substitue values in the configuration file in the form of -Dkey1=val1...
 
-Options:
+options:
 * -p, --pipe 
     This is used to specify which pipe to execute in the configuration file. The default is the startup pipe specified in the configuration file.
 * -s, --service
     The parameter will run DataPipes as a long running service, listening on a predefined port specified in the configuration file.
 
+vmargs:
+Command-line arguments used to substitue values in the configuration file in the form of -Dkey1=val1...
 
 
 ## Hello World
