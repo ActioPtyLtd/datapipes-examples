@@ -6,12 +6,31 @@ DataPipes is a lightweight cross-platform app specifically built to orchestrate 
 ## How dows DataPipes work?
 DataPipes is written in Scala and runs on the JVM, allowing for it to be deployed on Windows, Linux and macOS systems. PipeScript is a human readable DSL (domain specific language) that captures how to orchestrate the flow of data between systems. DataPipes interprets and executes PipeScript. It can read PipeScript instances from your local file system or retrieve up-to-date instructions via an API call.
 
+## Command Line Interface
+The command line options for DataPipes are as follows:
+
+```shell
+$ ./run
+    [-c <configName.conf>]
+    [-p <pipeName>]
+    [-s] 
+    -Dkey1=val1 -Dkey2=val2 ...
+```
+* -c, --config 
+    This is used to specify the configuration file to execute. The default is application.conf.
+* -p, --pipe 
+    This is used to specify which pipe to execute in the configuration file. The default is the startup pipe specified in the configuration file.
+* -s, --service
+    The parameter will run DataPipes as a long running service, listening on a predefined port specified in the configuration file.
+
+
+
 ## Hello World
 
 To run the Hello World example, run the following command:
 
 ```shell
-$ ./run.sh -c ./examples/helloworld.conf
+$ ./run -c ./examples/helloworld.conf
 ```
 
 Once DataPipes completes, view the file output.txt
