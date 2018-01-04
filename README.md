@@ -10,14 +10,15 @@ DataPipes is written in Scala and runs on the JVM, allowing for it to be deploye
 The command line options for DataPipes are as follows:
 
 ```shell
-$ ./run
-    [-c <configName.conf>]
-    [-p <pipeName>]
-    [-s] 
-    -Dkey1=val1 -Dkey2=val2 ...
+$ ./run -c <filename> [options]... [vmargs]...
+
 ```
-* -c, --config 
-    This is used to specify the configuration file to execute. The default is application.conf.
+options
+    Command-line options seperated by spaces.
+vmwargs
+    Command-line arguments used to substitue values in the configuration file in the form of -Dkey1=val1...
+
+Options:
 * -p, --pipe 
     This is used to specify which pipe to execute in the configuration file. The default is the startup pipe specified in the configuration file.
 * -s, --service
