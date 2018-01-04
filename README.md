@@ -15,9 +15,9 @@ Tasks perform some operation, usually with a side-effect, on an incoming Data Se
 
 Tasks at a high level can be of either extract, transform or load type:
 
-Extractors - query data sources to create a stream of data
-Transformers - transform the incoming stream of data
-Loaders - push the incoming stream of data to data sources
+* Extractors - query data sources to create a stream of data
+* Transformers - transform the incoming stream of data
+* Loaders - push the incoming stream of data to data sources
 
 
 ### Pipelines
