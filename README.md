@@ -27,7 +27,7 @@ Pipes coordinate and direct the flow of data between tasks and other pipes. They
 
 
 ### DataSets
-Data Sets are hierarchical data structures used by DataPipes internally. Data Sets can be defined by the following data types: 
+DataSets are hierarchical data structures used by DataPipes internally. DataSets can be defined by the following data types: 
 
 * String
 * Numeric
