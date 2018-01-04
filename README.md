@@ -9,12 +9,23 @@ DataPipes is written in Scala and runs on the JVM, allowing for it to be deploye
 ## DataPipes Concepts
 
 ### Tasks
+Tasks perform some operation, usually with a side-effect, on an incoming Data Set to produce an outgoing Data Set.
+
 ![alt text](http://yuml.me/diagram/scruffy/activity/(start)->(Task)->(end))
 
+Tasks at a high level can be of either extract, transform or load type:
 
-<img src="" >
+Extractors - query data sources to create a stream of data
+Transformers - transform the incoming stream of data
+Loaders - push the incoming stream of data to data sources
+
 
 ### Pipelines
+Pipes coordinate and direct the flow of data between tasks and other pipes. They can for example connect extractors and transforms together and similarly transforms to loaders to create a simple ETL pipeline.
+
+![alt text](http://yuml.me/diagram/scruffy/activity/(start)->(Extract)->(Transform)->(Load)->(end))
+
+
 ### DataSets
 
 ## Command Line Interface
