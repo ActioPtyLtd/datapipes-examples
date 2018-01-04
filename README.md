@@ -7,9 +7,10 @@ DataPipes is a lightweight cross-platform app specifically built to orchestrate 
 DataPipes is written in Scala and runs on the JVM, allowing for it to be deployed on Windows, Linux and macOS systems. PipeScript is a human readable DSL (domain specific language) that captures how to orchestrate the flow of data between systems. DataPipes interprets and executes PipeScript. It can read PipeScript instances from your local file system or retrieve up-to-date instructions via an API call.
 
 ## DataPipes Concepts
+When using DataPipes there are a few fundamental concepts that will help anyone using it for the first time. These include DataSets, Tasks, Pipelines and Events.
 
 ### DataSets
-DataSets are hierarchical data structures used by DataPipes internally. DataSets can be defined by the following data types: 
+DataSets are hierarchical data structures used by DataPipes internally. Elements of the data structure can be accessed using expressions within tasks. DataSets can be defined by the following data types: 
 
 * String, Numeric, Date, Boolean, Record, Array or Empty
 
@@ -50,6 +51,8 @@ Tasks at a high level can be of either extract, transform or load type:
 Pipes coordinate and direct the flow of data between tasks and other pipes. They can for example connect extractors and transforms together and similarly transforms to loaders to create a simple ETL pipeline.
 
 ![alt text](http://yuml.me/diagram/scruffy/activity/(start)->(Extract)->(Transform)->(Load)->(end))
+
+### Events
 
 
 ## Command Line Interface
