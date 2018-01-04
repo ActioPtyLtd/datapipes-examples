@@ -6,6 +6,17 @@ DataPipes is a lightweight cross-platform app specifically built to orchestrate 
 ## How does DataPipes work?
 DataPipes is written in Scala and runs on the JVM, allowing for it to be deployed on Windows, Linux and macOS systems. PipeScript is a human readable DSL (domain specific language) that captures how to orchestrate the flow of data between systems. DataPipes interprets and executes PipeScript. It can read PipeScript instances from your local file system or retrieve up-to-date instructions via an API call.
 
+## DataPipes Concepts
+
+### Tasks
+![alt text](http://yuml.me/diagram/scruffy/activity/(start)->(Task)->(end))
+
+
+<img src="" >
+
+### Pipelines
+### DataSets
+
 ## Command Line Interface
 The command line options for DataPipes are as follows:
 
