@@ -27,6 +27,37 @@ Pipes coordinate and direct the flow of data between tasks and other pipes. They
 
 
 ### DataSets
+Data Sets are hierarchical data structures used by DataPipes internally. Data Sets can be defined by the following data types: 
+
+* String
+* Numeric
+* Date
+* Boolean
+* Record
+* Array
+* Empty
+
+These data structures can be thought of as json structures, such as the following:
+
+```json
+{
+  "person": {
+    "firstName": "John",
+    "lastName": "Smith",
+    "address": {
+      "addr1": "George St.",
+      "addr2": "Sydney",
+      "postcode": 2000
+    },
+    "phoneNumbers": [
+      "98765432",
+      "87654321",
+      "76543212"
+    ]
+  }
+}
+```
+
 
 ## Command Line Interface
 The command line options for DataPipes are as follows:
