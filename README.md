@@ -60,7 +60,7 @@ These data structures can be thought of as json structures, such as the followin
 
 ### Events
 Tasks may generate Events, such as when the task started and completed, or if any exceptions occurred during processing. They essentially capture activity throughout the life cycle of a Task. This also includes capturing metrics. Events can be visualised as follows:
-
+![alt text](http://yuml.me/diagram/scruffy/class/[Event|time:%20timestamp]<>-data>[DataSet],%20[Event]-created_by%201>[Task])
 ![alt text](http://yuml.me/f4c9d947.png)
 
 
@@ -71,11 +71,11 @@ Tasks perform some operation, usually with a side-effect, on an incoming DOM to 
 
 Tasks at a high level can be of either extract, transform or load type:
 
-* Extractors - query data sources to create a stream of data
-* Transformers - transform the incoming stream of data
-* Loaders - push the incoming stream of data to data sources
+* Extractors - interact with DataSources to extract a stream of DOMs
+* Transformers - transform the incoming DOMs
+* Loaders - interact with DataSources to load data into them
 
-Tasks go through a life cycle in order or:
+Tasks go through a life cycle in order of:
 
 1. Initialise
 2. Process incoming DOMs, optionally generate further DOMs
@@ -90,7 +90,7 @@ Pipes coordinate and direct the flow of data between tasks and other pipes. They
 The command line options for DataPipes are as follows:
 
 ```shell
-$ ./run -c <filename> [options]... [vmargs]...
+$ datapipes -c <filename> [options]... [vmargs]...
 
 ```
 
@@ -110,7 +110,7 @@ vmargs:
 To run the Hello World example, run the following command:
 
 ```shell
-$ ./run -c ./examples/helloworld.conf
+$ datapipes -c ./examples/helloworld.conf
 ```
 
 Once DataPipes completes, view the file output.txt
