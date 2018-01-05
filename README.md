@@ -60,9 +60,7 @@ These data structures can be thought of as json structures, such as the followin
 
 ### Events
 Tasks may generate Events, such as when the task started and completed, or if any exceptions occurred during processing. They essentially capture activity throughout the life cycle of a Task. This also includes capturing metrics. Events can be visualised as follows:
-![alt text](http://yuml.me/diagram/scruffy/class/[Event|time:%20timestamp]<>-data>[DataSet],%20[Event]-created_by%201>[Task])
-![alt text](http://yuml.me/f4c9d947.png)
-
+![alt text](http://yuml.me/diagram/scruffy/class/[Event|time:%20timestamp]<>-data>[DataSet],%20[Event]-created_by%201%20%20%20%20%20>[Task])
 
 ### Tasks
 Tasks perform some operation, usually with a side-effect, on an incoming DOM to produce one or more outgoing DOMs.
