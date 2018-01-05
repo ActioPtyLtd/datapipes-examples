@@ -39,8 +39,6 @@ DataSets are hierarchical data structures used by DataPipes internally. Elements
 
 ![alt text](http://yuml.me/diagram/scruffy;dir:TB/class/[<<DataSet>>]^[Record],%20[<<DataSet>>]^[Array],%20[Record]++-%20%20%20%20%20%20fields%20*[<<DataSet>>],%20[Array]++-%20%20%20%20%20%20items%20*[<<DataSet>>],%20[<<DataSet>>]^[String;Date;Numeric;Boolean;Empty])
 
-![alt text](http://yuml.me/97665715.png)
-
 These data structures can be thought of as json structures, such as the following:
 
 ```json
