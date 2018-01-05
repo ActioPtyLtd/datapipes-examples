@@ -59,6 +59,9 @@ These data structures can be thought of as json structures, such as the followin
 ```
 
 ### Events
+Tasks may generate Events, such as when the task started and completed, or if any exceptions occurred during processing. They essentially capture activity throughout the life cycle of a Task. This also includes capturing metrics. Events can be visualised as follows:
+
+![alt text](http://yuml.me/f4c9d947.png)
 
 
 ### Tasks
