@@ -75,6 +75,11 @@ Tasks at a high level can be of either extract, transform or load type:
 * Transformers - transform the incoming stream of data
 * Loaders - push the incoming stream of data to data sources
 
+Tasks go through a life cycle in order or:
+
+1. Initialise
+2. Process incoming DOMs, optionally generate further DOMs
+3. Finalise
 
 ### Pipelines
 Pipes coordinate and direct the flow of data between tasks and other pipes. They can for example connect extractors and transforms together and similarly transforms to loaders to create a simple ETL pipeline.
